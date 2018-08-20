@@ -1,0 +1,124 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  @include ubuntu();
+  color: $black;
+}
+
+.container {
+  margin: 0 auto;
+  width: 940px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-width: 940px + 20px;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+// Tag styles reset
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  li {
+    list-style: none;
+  }
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.section {
+  height: 100vh;
+  min-height: 650px;
+
+  &_centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.section-title {
+  font-size: 72px;
+  @include gagalin();
+  color: $yellow;
+  margin-bottom: 40px;
+
+  &_color {
+    &_black {
+      color: $black;
+    }
+  }
+
+  &_position {
+    &_center {
+      text-align: center;
+    }
+  }
+}
+
+.btn {
+  padding: 3px 20px;
+  border-radius: 7px;
+  background: $red;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;
+
+  &:hover {
+    background: $yellow;
+  }
+}
+
+a {
+  color: #000000;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  text-decoration: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}

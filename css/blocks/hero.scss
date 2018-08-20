@@ -1,0 +1,103 @@
+.hero {
+  background: url(../img/bg/hero-bg.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.hero__container {
+  justify-content: flex-start;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+
+.nav {
+  margin-right: 20px;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center
+}
+
+.header__buttons {
+  display: flex;
+  align-items: center;
+  font-family: 'Ubuntu';
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.nav__item {
+  display: flex;
+  align-items: center;
+
+  &:first-child {
+    &::before {
+      display: none;
+    }
+  }
+  
+  &::before {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 4px;
+    background: #ffffff;
+    border-radius: 50%;
+    margin: 0 10px;
+  }
+}
+
+.nav__link {
+  color: #ffffff;
+  text-decoration: none;
+
+  &:hover {
+    color: $yellow;
+  }
+}
+
+.hero__content {
+  display: flex;
+  align-items: center;
+  flex: 0.85;
+}
+
+.hero__picture {
+  margin-right: 20px;
+}
+
+.hero__text {
+  padding-top: 60px;
+}
+
+.title {
+  font-family: 'Gagalin-Regular';
+  font-size: 72px;
+  color: #000000;
+  margin-bottom: 10px;
+
+  &--color {
+    &_yellow {
+      color: $yellow;
+    }
+  }
+
+  &--align_center {
+    text-align: center;
+  }
+}
+
+.hero__subtitle {
+  font-family: 'Lifehack-Medium';
+  font-size: 65px;
+  color: #ffffff;
+  line-height: 60px;
+  text-transform: lowercase;
+}
