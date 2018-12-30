@@ -2,7 +2,7 @@
 
 ```bash
 
-https://kirillxsherikhov.github.io/Burgers/
+https://ksherikhov.github.io/Burgers/build/
 
 ```
 
