@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: rem(12px);
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header__buttons {
+  display: flex;
+  align-items: center;
+}
+
+.header__menu {
+  flex: 1;
+  text-align: right;
+  margin-right: rem(20px);
+}

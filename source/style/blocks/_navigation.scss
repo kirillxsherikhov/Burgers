@@ -1,0 +1,36 @@
+.navigation__list {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.navigation__item {
+  &:last-child {
+    &:after {
+      display: none;
+    }
+
+    margin-right: 0;
+  }
+
+  &:after {
+    margin: 0 12px;
+    color: white;
+    content: "•";
+  }
+
+  white-space: nowrap;
+}
+
+.navigation__link {
+  @include ubuntu(medium);
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  font-size: rem(13px);
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}

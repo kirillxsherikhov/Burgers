@@ -1,0 +1,73 @@
+.section-welcome {
+  position: relative;
+  background: url('../images/background/bg-section-1.png') center center no-repeat;
+  background-size: cover;
+}
+
+.section-welcome__content {
+  display: flex;
+}
+
+.section-welcome__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  padding-bottom: 15%;
+}
+
+.section-welcome__left,
+.section-welcome__right {
+  float: left;
+  width: 50%;
+}
+
+.section-welcome__right {
+  padding-top: rem(115px);
+}
+
+.section-welcome__description {
+  @include lifehack;
+  display: block;
+  font-size: rem(65px);
+  color: white;
+  line-height: 1em;
+  text-transform: lowercase;
+}
+
+.section-welcome__big-burger {
+  position: relative;
+  left: 50%;
+  display: inline-block;
+  max-width: 100%;
+  max-height: 100%;
+  transform: translateX(-50%);
+}
+
+.down-btn {
+  &:hover {
+    .down-btn__icon {
+      width: rem(45px);
+      height: rem(45px);
+      margin-top: rem(-15px);
+    }
+  }
+
+  position: absolute;
+  bottom: rem(20px);
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: rem(60px);
+  height: rem(60px);
+  transform: translateX(-50%);
+  transition: .3s;
+}
+
+.down-btn__icon {
+  width: rem(40px);
+  height: rem(40px);
+  transition: .3s;
+  fill: #fff;
+}

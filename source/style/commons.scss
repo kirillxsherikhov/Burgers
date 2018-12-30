@@ -1,0 +1,37 @@
+@import 'fonts';
+
+@import 'abstract/functions';
+@import 'abstract/mixin';
+@import 'abstract/variables';
+
+@import 'base/animations';
+@import 'base/base';
+@import 'base/typography';
+
+@import 'components/buttons';
+@import 'components/form';
+@import 'components/modal';
+
+@import 'blocks/header';
+@import 'blocks/logo';
+@import 'blocks/navigation';
+@import 'blocks/hamburger-button';
+@import 'blocks/section-welcome';
+@import 'blocks/section-we';
+@import 'blocks/section-burgers';
+@import 'blocks/section-team';
+@import 'blocks/section-menu';
+@import 'blocks/section-reviews';
+@import 'blocks/section-howwork';
+@import 'blocks/section-form';
+@import 'blocks/section-contacts';
+@import 'blocks/pagepanel';
+@import 'blocks/footer';
+@import 'blocks/socials';
+@import 'blocks/player';
+
+@import 'components/mobile-menu';
+
+@import 'themes/themes';
+
+@import 'base/utilities';

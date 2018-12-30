@@ -1,0 +1,11 @@
+.mobile
+  .mobile__top
+    .logo
+      img.logo__icon(src="./images/icon/logo.svg", alt="Mr. Buurger")
+    button.mobile__close(type="button")
+  nav.mobile__mobile-nav
+    ul.mobile-nav__list
+      each item in [{numb: 1, desc: "о нас"},{numb: 2, desc: "бургеры"},{numb: 3, desc: "команда"},{numb: 4, desc: "меню"},{numb: 5, desc: "отзывы"},{numb: 6, desc: "как мы работаем"},{numb: 8, desc: "контакты"}]
+        li.mobile-nav__item
+          a.mobile-nav__link(href="#", data-scroll-to=item.numb) #{item.desc}
+      

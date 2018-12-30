@@ -1,0 +1,39 @@
+extends ../_template.pug
+
+block variables
+ - var title = 'Mr.Burger - мы делаем натуральные бургеры'
+ - var bodyClass = 'home'
+block content
+  .wrapper
+    include ../layout/mobile-menu.pug
+    main.main
+      section.section.main__section-welcome.section-welcome.active-js
+        .container
+          include ../sections/_section-welcome.pug
+      section.section.main__section-we.section-we
+        .container
+          include ../sections/_section-we.pug
+      section.section.main__section-burgers.section-burgers
+        include ../sections/_section-burgers.pug
+      section.section.main__section-team.section-team
+        include ../sections/_section-team.pug
+      section.section.main__section-menu.section-menu
+        include ../sections/_section-menu.pug
+      section.section.main__section-reviews.section-reviews
+        include ../sections/_section-reviews.pug
+      section.section.main__section-howwork.section-howwork
+        .container.section-howwork__container
+          include ../sections/_section-howwork.pug
+      section.section.main__section-form.section-form
+        .container.section-form__container
+          include ../sections/_section-form.pug
+      section.section.main__section-contacts.section-contacts
+        include ../sections/_section-contacts.pug
+    nav.pagepanel
+      ul.pagepanel__list
+        li.pagepanel__item
+          button.pagepanel__button.pagepanel__button--active(data-scroll-to=0)
+        each item in [1,2,3,4,5,6,7,8]
+          li.pagepanel__item
+            button.pagepanel__button(data-scroll-to=item)
+            

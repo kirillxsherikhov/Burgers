@@ -1,0 +1,45 @@
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: rem(10px) 0;
+  background: url('../images/background/bg-footer.png') center bottom no-repeat;
+  background-size: cover;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.footer__column {
+  width: 50%;
+  margin-bottom: rem(15px);
+}
+
+.footer__address {
+  font-size: rem(14px);
+  color: #ffffff;
+}
+
+.footer__phone {
+  @include ubuntu(bold);
+  font-size: rem(14px);
+  color: $red;
+  text-decoration: none;
+}
+
+.footer__phone-svg {
+  width: 11px;
+  height: 11px;
+  margin-right: 10px;
+}
+
+.footer__column--right {
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  margin-bottom: 0;
+}

@@ -1,0 +1,64 @@
+- var burgetlist=[{image:"./images/content/slider/black-burger.png",name:"Dark Beef Burger",desc:"Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.",price:"500",kkal:"1200"},{image:"./images/content/slider/burger_sandwich_PNG4124.png",name:"Sandwich Burger",desc:"Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.",price:"700",kkal:"2200"},{image:"./images/content/slider/Chiken burger.png",name:"Chiken burger",desc:"Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.",price:"300",kkal:"1100"},{image:"./images/content/slider/NYC-Diner-Bacon-Cheeseburger.png",name:"Bacon Cheeseburger",desc:"Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.",price:"900",kkal:"900"},{image:"./images/content/slider/Spicy_Shrimp_Burger.png",name:"Spicy Shrimp Burger",desc:"Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.",price:"1200",kkal:"1300"}];
+.section-burgers__slider-left.slider-left
+  button.slider-left__btn(type="button")
+    svg.slider-left__btn-svg
+      use(xlink:href="./images/sprite/icons.svg#arrow-scroll", x=0, y=0)
+.section-burgers__slider-center.slider-center
+  ul.slider-center__list.owl-carousel.owl-theme
+    each burger in burgetlist
+      li.slider-center__item
+        .slider-center__item-container
+          figure.slider-center__burger-image.burger-image
+            img.burger-image__picture(src=burger.image, alt=burger.name)
+            button.burger-image__consist(type="button")
+              svg.burger-image__consist-svg
+                use(xlink:href="./images/sprite/icons.svg#burger", x=0, y=-83, fill="#ffffff")
+              span.burger-image__consist-text Состав
+            .burger-image__consist-wrapper
+              .burger-image__consist-row
+                svg.burger-image__consist-left-svg
+                  use(xlink:href="./images/sprite/icons.svg#beef", x=0, y=-14, fill="#e35028", transform="translate(0 3)")
+                b.burger-image__consist-intext Говядина
+                span.burger-image__consist-weight 300 г
+              .burger-image__consist-row
+                svg.burger-image__consist-left-svg
+                  use(xlink:href="./images/sprite/icons.svg#buns", x=0, y=-53, fill="#f8b43a", transform="translate(-3 8)")
+                b.burger-image__consist-intext Булочки
+                span.burger-image__consist-weight 100 г
+              .burger-image__consist-row
+                svg.burger-image__consist-left-svg
+                  use(xlink:href="./images/sprite/icons.svg#salad", x=0, y=-1062, fill="#8ac03e", transform="translate(0 3)")
+                b.burger-image__consist-intext Зелень
+                span.burger-image__consist-weight 70 г
+              .burger-image__consist-row
+                svg.burger-image__consist-left-svg
+                  use(xlink:href="./images/sprite/icons.svg#sauce", x=0, y=-1101, fill="#e35028", transform="translate(0 3)")
+                b.burger-image__consist-intext Соус
+                span.burger-image__consist-weight 150 г
+              .burger-image__consist-row
+                svg.burger-image__consist-left-svg
+                  use(xlink:href="./images/sprite/icons.svg#cucumber", x=0, y=-162, fill="#8ac03e", transform="translate(0 3)")
+                b.burger-image__consist-intext Овощи
+                span.burger-image__consist-weight 200 г
+              .burger-image__consist-row
+                svg.burger-image__consist-left-svg
+                  use(xlink:href="./images/sprite/icons.svg#cheese", x=0, y=-128, fill="#f8b43a", transform="translate(0 3)")
+                b.burger-image__consist-intext Сыр
+                span.burger-image__consist-weight 80 г
+            button.burger-image__kkal(type="button")
+              .burger-image__kkal-icon
+                svg.burger-image__kkal-icon-svg
+                  use(xlink:href="./images/sprite/icons.svg#kkal", x=0, y=-520, fill="#ffffff")
+                b.burger-image__kkal-icon-number #{burger.kkal}
+              span.burger-image__kkal-text ккал
+          article.slider-center__buurger-info.burger-info
+            h2.burger-info__title.section__title.section__title_white #{burger.name}
+            p.burger-info__text #{burger.desc}
+            .burger-info__order
+              b.burger-info__order-price #{burger.price}
+              span.burger-info__order-price-text рублей
+              a.burger-info__order-button.btn(href="#", data-scroll-to=7) Заказать
+.section-burgers__slider-right.slider-right
+  button.slider-right__btn(type="button")
+    svg.slider-right__btn-svg
+      use(xlink:href="./images/sprite/icons.svg#arrow-scroll", x=0, y=0)

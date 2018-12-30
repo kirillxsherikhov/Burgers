@@ -1,0 +1,13 @@
+.section-howwork {
+  background: url('../images/background/bg-section-7.png') no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.section-howwork__container {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}

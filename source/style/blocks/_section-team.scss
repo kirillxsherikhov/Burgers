@@ -1,0 +1,130 @@
+.section-team {
+  .section__title {
+    margin-bottom: 12%;
+  }
+
+  position: relative;
+  background: url('../images/background/bg-section-4.png') 50% no-repeat;
+  background-size: cover;
+}
+
+.section-team__container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 5% 2% 0 7%;
+  background: rgba(#2f3234, .93);
+}
+
+.section-team__content {}
+
+.section-team__item {
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.active {
+    .section-team__btn {
+      &:before {
+        transform: rotate(-180deg);
+      }
+
+      color: $yellow;
+    }
+
+    .section-team__item-content {
+      height: rem(125px);
+    }
+  }
+
+  margin-bottom: rem(40px);
+}
+
+.section-team__btn {
+  @include gagalin;
+
+  &:before,
+  &:after {
+    position: absolute;
+    top: rem(6px);
+    left: rem(0px);
+    display: block;
+    width: 0;
+    height: 0;
+    content: "";
+  }
+
+  &:before {
+    transform: rotate(0deg);
+    transition: .3s;
+    border-top: rem(7px) solid $yellow;
+    border-left: rem(5px) solid transparent;
+    border-right: rem(5px) solid transparent;
+    border-bottom: rem(0px) solid transparent;
+  }
+
+  &:after {
+    display: none;
+    border-bottom: rem(7px) solid $yellow;
+    border-left: rem(5px) solid transparent;
+    border-right: rem(5px) solid transparent;
+    border-top: rem(0px) solid transparent;
+  }
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font-size: rem(14px);
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  padding-left: rem(25px);
+}
+
+.section-team__item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 0;
+  transition: height .3s ease;
+  overflow: hidden;
+}
+
+.section-team__picture {
+  flex-basis: 30%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.section-team__image {
+  width: rem(100px);
+  height: rem(100px);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.section-team__text {
+  flex-basis: 70%;
+  text-align: left;
+}
+
+.section-team__item-title {
+  @include ubuntu(bold);
+  font-size: rem(14px);
+  color: #fff;
+  margin-bottom: rem(14px);
+}
+
+.section-team__text-content {
+  @include ubuntu(light);
+  font-size: rem(14px);
+  color: #fff;
+}

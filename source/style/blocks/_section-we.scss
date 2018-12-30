@@ -1,0 +1,49 @@
+.section-we {
+  .section__title {
+    margin-bottom: rem(80px);
+  }
+
+  display: flex;
+  align-items: center;
+  background: url('../images/background/bg-section-2.png') no-repeat;
+  text-align: center;
+  background-size: cover;
+  background-position: center center;
+}
+
+.section-we__icon-svg--meat {
+  width: 96px;
+  height: 89px;
+}
+
+.section-we__icon-svg--hand {
+  width: 73px;
+  height: 86px;
+}
+
+.section-we__icon-svg--natural {
+  width: 88px;
+  height: 76px;
+}
+
+.section-we__list {
+  display: flex;
+}
+
+.section-we__item {
+  display: flex;
+  flex-direction: column;
+  padding: 0 rem(15px);
+  margin-bottom: rem(50px);
+}
+
+.section-we__decription {
+  text-align: left;
+}
+
+.section-we__title {
+  @include lifehack;
+  font-size: rem(24px);
+  color: $black;
+  margin-bottom: rem(20px);
+}

@@ -1,0 +1,50 @@
+h2.section__title.section__title--form Закажите доставку
+form.section-form__form#section-form__form(action="")
+  .section-form__content
+    .section-form__column
+      .section-form__row
+        label.section-form__block
+          .section-form__label Имя
+          input.section-form__input(type="text", name="name")
+        label.section-form__block
+          .section-form__label Телефон
+          input.section-form__input(type="text", name="phone")
+      .section-form__row
+        label.section-form__block
+          .section-form__label Улица
+          input.section-form__input(type="text", name="street")
+      .section-form__row
+        label.section-form__block
+          .section-form__label Дом
+          input.section-form__input(type="text", name="home")
+        label.section-form__block
+          .section-form__label Корпус
+          input.section-form__input(type="text", name="housing")
+        label.section-form__block
+          .section-form__label Квартира
+          input.section-form__input(type="text", name="appartment")
+        label.section-form__block
+          .section-form__label Этаж
+          input.section-form__input(type="text", name="floor")
+    .section-form__column
+      .section-form__row
+        label.section-form__block
+          .section-form__label Комментарий
+          textarea.section-form__input.section-form__textarea(name="comment")
+      .section-form__row
+        label.section-form__radio
+          input.section-form__radio-elem(type="radio", name="payment")
+          .section-form__radio-fake
+          h3.section-form__radio-title Потребуется сдача
+        label.section-form__radio
+          input.section-form__radio-elem(type="radio", name="payment")
+          .section-form__radio-fake
+          h3.section-form__radio-title Оплата по карте
+      .section-form__row
+        label.section-form__radio.section-form__radio--checkbox
+          input.section-form__radio-elem(type="checkbox", name="callback")
+          .section-form__radio-fake
+          h3.section-form__radio-title Не перезванивать
+      .section-form__row
+        input.section-form__button(type="submit", value="Заказать")
+        input.section-form__button.section-form__button--reset(type="reset", value="Очистить")

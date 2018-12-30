@@ -1,0 +1,35 @@
+include ./utils/_mixin.pug
+block variables
+
+doctype html
+html(lang="ru-RU")
+  head
+    meta(charset="utf-8")
+
+    block page-title
+      title #{title}
+
+    include ./base/head
+
+  body(class=bodyClass)
+    block content
+    .overlay.overlay--reviews
+      .modal.modal--reviews
+        .modal__row 
+          b.modal__title 
+          button.modal__close
+        .modal__row
+          p.modal__text 
+    .overlay.overlay--form
+      .modal.modal--form
+        .modal__row.modal__row--form 
+          b.modal__text.modal__text--formresp 
+        .modal__row.modal__row--form
+          button.modal__okbtn.btn Закрыть
+    script(src='./js/vendor.min.js' defer)
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.6/mobile-detect.min.js" defer)
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js" defer)
+    script(src='https://api-maps.yandex.ru/2.1.17/?load=package.standard&lang=ru-RU' defer)
+    script(src="https://www.youtube.com/iframe_api" defer)
+    script(src='./js/common.js' defer)
+    block scripts
