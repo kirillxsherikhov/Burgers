@@ -1,0 +1,237 @@
+.slider {
+    background: linear-gradient(to bottom, #f9b43b 0%, #eb8d38 50%, #f9b43b 100%);
+    align-items: center;
+}
+
+.slide__container {
+    position: relative;
+}
+
+.slider__slide {
+    display: flex;
+    position: relative;
+
+    @include tablets {
+        flex-direction: column;
+    }
+}
+
+.slide__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.slide__img-pic {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.slide__description {
+    flex: 1;
+
+    @include tablets {
+        text-align: center;
+    }
+}
+
+.descriptoin__title {
+
+    @include tablets {
+        max-width: rem(400px);
+        margin: 0 auto;
+    }
+}
+
+.slide__title {
+    color: $primary-text-color;
+    margin-bottom: rem(40px);
+
+    @include phones {
+        font-size: 50px;
+        line-height: 52px;
+        margin-bottom: rem(20px);
+    }
+
+    @include phones-xs {
+        font-size: 35px;
+        line-height: 32px;
+        margin-bottom: rem(10px);
+    }
+}
+
+.description__text p {
+    color: $primary-text-color;
+    line-height: 24px;
+    margin-bottom: rem(20px);
+
+    @include tablets {
+        font-size: 16px;
+    }
+
+    @include phones {
+        margin-bottom: 0;
+    }
+
+    @include phones-xs {
+        font-size: 12px;
+    }
+}
+
+.description__order {
+    font: 400 72px/72px Gagalin;
+    color: $buttons-color;
+
+    @include phones {
+        font-size: 50px;
+    }
+
+    @include phones-xs {
+        font-size: 40px;
+    }
+
+    .order__maney {
+        font-size: 30px;
+
+        @include phones {
+            font-size: 24px;
+        }
+
+        @include phones-xs {
+            font-size: 18px;
+        }
+    }
+}
+
+// -----------------------------   composotion  --------  kkal
+.slide__composition,
+.slide__kkal {
+    position: absolute;
+    width: rem(90px);
+    height: rem(90px);
+}
+
+.slide__composition {
+    top: rem(-20px);
+    left: 0;
+    border-radius: rem(5px);
+    background:
+        url(../img/slider/burger-litle.png) center center no-repeat,
+        $buttons-color;
+    cursor: pointer;
+
+    @include tablets {
+        top: rem(-90px);
+    }
+
+    @include phones {
+        top: rem(-65px);
+        left: rem(-20px);
+    }
+}
+
+.slide__kkal {
+    bottom: rem(-20px);
+    background: url(../img/slider/kkal.png) center center no-repeat;
+
+    @include tablets {
+        right: 0;
+        top: rem(-90px);
+    }
+
+    @include phones {
+        top: rem(-65px);
+        right: rem(-30px);
+    }
+}
+
+// -----------------------------   composotion__menu
+.composotion__menu {
+    position: absolute;
+    background-color: rgba(255, 255, 255, .9);
+    border-radius: rem(5px);
+    padding: rem(15px);
+    text-align: right;
+    left: 100%;
+    cursor: default;
+
+    @include phones {
+        padding: rem(10px);
+    }
+}
+
+.composotion__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+
+    &-beef {
+        background: url(../img/slider/composition/cow.png) left center no-repeat;
+    }
+
+    &-buns {
+        background: url(../img/slider/composition/buns.png) left center no-repeat;
+    }
+
+    &-salad {
+        background: url(../img/slider/composition/salad.png) left center no-repeat;
+    }
+
+    &-sauce {
+        background: url(../img/slider/composition/sauce.png) left center no-repeat;
+    }
+
+    &-cucumber {
+        background: url(../img/slider/composition/cucumber.png) left center no-repeat;
+    }
+
+    &-cheese {
+        background: url(../img/slider/composition/cheese.png) left center no-repeat;
+    }
+
+    span {
+        line-height: 45px;
+    }
+
+    span:first-of-type {
+        font-weight: 500;
+        line-height: 45px;
+        margin-left: rem(55px);
+        margin-right: rem(55px);
+
+        @include phones-xs {
+            margin-right: rem(35px);
+        }
+    }
+}
+
+.composition-img {
+    width: rem(45px);
+    height: rem(45px);
+    margin-right: 50px;
+
+    img {
+        max-width: 100%;
+        max-height: 100%
+    }
+}
+
+
+
+// ---------------------------  scroll
+.scroll__left,
+.scroll__right {
+    position: absolute;
+    top: 47%;
+}
+
+.scroll__right {
+    right: rem(-35px);
+    transform: rotate(-90deg);
+}
+
+.scroll__left {
+    left: rem(-35px);
+    transform: rotate(90deg);
+}

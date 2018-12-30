@@ -1,0 +1,27 @@
+.navigation__menu {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.navigation__item:not(:last-child) {
+    position: relative;
+    margin-right: rem(39px);
+
+    &:after {
+        content: "⦁";
+        position: absolute;
+        right: rem(-20px);
+        top: 0;
+        color: $primary-text-color;
+    }
+}
+
+.navigation__link {
+    color: $primary-text-color;
+    font-size: rem(13px);
+    text-transform: uppercase;
+}

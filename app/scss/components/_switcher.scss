@@ -1,0 +1,52 @@
+.switcher {
+    position: fixed;
+    z-index: 99;
+    top: rem(95px);
+    right: rem(55px);
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.switcher__page-item {
+    margin-bottom: rem(15px);
+}
+
+.switcher__page-link {
+    position: relative;
+
+    &:before {
+        content: "";
+        display: block;
+        width: rem(6px);
+        height: rem(6px);
+        border-radius: 50%;
+        background-color: $primary-text-color;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: rem(-11px);
+        left: rem(-5px);
+        width: rem(14px);
+        height: rem(14px);
+        border-radius: 50%;
+        border: rem(1px) solid $primary-text-color;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    &:hover:after {
+        opacity: 1;
+    }
+
+}
+
+.switcher__page-link__active {
+    &:after {
+        opacity: 1;
+    }
+}

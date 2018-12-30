@@ -1,0 +1,23 @@
+.social {
+    display: flex;
+    align-items: center;
+    margin-top: rem(10px);
+}
+
+.social__item {
+    display: inline-block;
+
+    &:not(:first-child) {
+        margin-left: rem(20px);
+    }
+}
+
+.svg-sprite {
+    width: rem(20px);
+    height: rem(20px);
+    fill: #595959;
+
+    :hover {
+        fill: #fff;
+    }
+}

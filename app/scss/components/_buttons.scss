@@ -1,0 +1,20 @@
+.button {
+    font: 500 13px/30px Ubuntu;
+    color: $primary-text-color;
+    text-transform: uppercase;
+    background-color: $buttons-color;
+    border-radius: rem(5px);
+    padding: rem(2px) rem(15px);
+
+    &:hover {
+        cursor: pointer;
+        background-color: $buttons-hover;
+    }
+}
+
+.button__reset {
+    background: none;
+    color: $primary-text-color;
+    cursor: pointer;
+    margin-left: rem(20px);
+}
